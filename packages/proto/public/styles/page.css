@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(
+    --font-sans,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Inter,
+    Arial,
+    sans-serif
+  );
+  color: var(--color-text, #e5e7eb);
+  background: var(--color-bg, #0f172a);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+header {
+  background: var(--color-header-bg, #0b1220);
+  color: var(--color-text-header, #ffffff);
+  padding: 48px 16px;
+  border-bottom: 1px solid var(--color-border, #1f2937);
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 8px;
+}
+header p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+a {
+  color: var(--color-accent, #38bdf8);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:focus-visible {
+  outline: 3px solid
+    color-mix(in oklab, var(--color-accent, #38bdf8), white 50%);
+  border-radius: 6px;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+section {
+  margin: 28px 0;
+}
+h2 {
+  margin: 0 0 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: var(--color-card, #ffffff);
+  border: 1px solid var(--color-border, #ffffff);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: #0b1320;
+  border-bottom: 1px solid var(--color-border, #1f2937);
+}
+
+.box {
+  padding: 14px;
+}
+.card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+.meta {
+  color: var(--color-muted, #000000);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+#Hikes,
+#Viewpoints,
+#Campsites {
+  padding-top: 6px;
+  border-top: 1px solid var(--color-border, #1f2937);
+}
+
+header {
+  background: #16a34a;
+  color: #ffffff;
+}
+header p {
+  color: rgba(255, 255, 255, 0.9);
+}

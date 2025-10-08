@@ -1,44 +1,70 @@
-<!DOCTYPE html>
-<html>
-    <style></style>
-    <body>
-        <header>
-            <h1>Zion National Park</h1>
-            <p>View the top hikes, viewpoints, and campsites to kickstart your next adventure at Zion!</p>
-        </header>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Zion National Park</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <main>
-            <section id="Viewpoints"></section>
-            
-            <section id="Hikes"></section>
-            <h2>Top Hikes</h2>
+    <!-- Shared styles -->
+    <link rel="stylesheet" href="/styles/tokens.css" />
+    <link rel="stylesheet" href="/styles/page.css" />
+  </head>
+  <body>
+    <!-- Breadcrumbs -->
+    <nav aria-label="Breadcrumb">
+      <a href="../index.html">Home</a> › <span aria-current="page">Zion National Park</span>
+    </nav>
+
+    <header>
+      <h1>Zion National Park</h1>
+      <p>View the top hikes, viewpoints, and campsites to kickstart your next adventure at Zion!</p>
+    </header>
+
+    <main>
+    <!--Hikes-->
+      <section id="Hikes" aria-labelledby="hikes-title">
+        <h2 id="hikes-title">Top Hikes</h2>
+        <div class="grid">
+          <article class="card">
+            <img>
+            <div class="box">
+              <h3><a href="zion/hikes/angels-landing.html">Angels Landing</a></h3>
+            </div>
+          </article>
+
+          <article class="card">
+            <img>
+            <div class="box">
+              <h3><a href="zion/hikes/narrows.html">The Narrows</a></h3>
+            </div>
+          </article>
+
+          <article class="card">
+            <img>
+            <div class="box">
+              <h3><a href="zion/hikes/subway.html">The Subway</a></h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!--Viewpoins-->
+      <section id="Viewpoints">
+        <section id="Viewpoints" aria-labelledby="viewpoints-title">
+            <h2 id="viewpoints-title">Top Viewpoints</h2>
             <div class="grid">
-                <article class="card">
-                    <img>
-                    <div class="box">
-                        <h3><a href="zion/hikes/angels-landing.html">Angels Landing</a></h3>
-                    </div>
-                </article>
+            </div>
+        </section>
+      </section>
 
-                <article class="card">
-                    <img>
-                    <div class="box">
-                        <h3><a href="zion/hikes/narrows.html">The Narrows</a></h3>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img>
-                    <div class="box">
-                        <h3><a href="zion/hikes/subway.html">The Subway</a></h3>
-                    </div>
-                </article>
-
-            <section id="Campsites"></section>
-        </main>
-
-        <nav aria-label="Breadcrumb">
-            <a href="../index.html">Home</a> › Zion National Park
-          </nav>
-    </body>
+    <!--Campsites-->
+      <section id="Campsites">
+        <section id="Campsites" aria-labelledby="campsites-title">
+            <h2 id="campsites-title">Top Campsites</h2>
+            <div class="grid">
+            </div>
+        </section>
+      </section>
+    </main>
+  </body>
 </html>

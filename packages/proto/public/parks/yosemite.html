@@ -1,45 +1,72 @@
-<!DOCTYPE html>
-<html>
-    <style></style>
-    <body>
-        <header>
-            <h1>Yosemite National Park</h1>
-            <p>View the top hikes, viewpoints, and campsites to kickstart your next adventure at Yosemite!</p>
-        </header>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Yosemite National Park</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/styles/tokens.css" />
+    <link rel="stylesheet" href="/styles/page.css" />
+  </head>
+  <body>
+    <!-- Breadcrumbs -->
+    <nav aria-label="Breadcrumb" style="max-width:1100px;margin:8px auto 0;padding:0 16px;">
+      <a href="/index.html">Home</a> › <span aria-current="page">Yosemite National Park</span>
+    </nav>
 
-        <main>
-            <section id="Viewpoints"></section>
-            
-            <section id="Hikes">
-                <h2>Top Hikes</h2>
-                <div class="grid">
-                    <article class="card">
-                        <img>
-                        <div class="box">
-                            <h3><a href="yosemite/hikes/clouds-rest.html">Clouds Rest</a></h3>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <img>
-                        <div class="box">
-                            <h3><a href="yosemite/hikes/half-dome.html">Half Dome</a></h3>
-                        </div>
-                    </article>
-                </article>
-                <article class="card">
-                    <img>
-                    <div class="box">
-                        <h3><a href="yosemite/hikes/mist-trail.html">Mist Trail</a></h3>
-                    </div>
-                </article>
-                </div>
-            </section>
+    <header>
+      <h1>Yosemite National Park</h1>
+      <p>Granite cliffs, thundering waterfalls, giant sequoias, and endless trails.</p>
+    </header>
+<!-- need to import images-->
+    <main>
+      <!-- Hikes -->
+      <section aria-labelledby="hikes-title" id="Hikes">
+        <h2 id="hikes-title">Top Hikes</h2>
+        <div class="grid">
+          <article class="card">
+            <img> 
+            <div class="box">
+              <h3><a href="/yosemite/hikes/mist-trail.html">Mist Trail → Vernal & Nevada Falls</a></h3>
+              <p class="meta">7.0 mi • 2,000 ft gain • Moderate–Strenuous</p>
+            </div>
+          </article>
+          <article class="card">
+            <img>
+            <div class="box">
+              <h3><a href="/yosemite/hikes/half-dome.html">Half Dome (Permits Required)</a></h3>
+              <p class="meta">14–16 mi • 4,800 ft gain • Strenuous</p>
+            </div>
+          </article>
+          <article class="card">
+            <img>
+            <div class="box">
+              <h3><a href="/yosemite/hikes/clouds-rest.html">Clouds Rest</a></h3>
+              <p class="meta">12.5 mi • 3,000 ft gain • Strenuous</p>
+            </div>
+          </article>
+        </div>
+      </section>
 
-            <section id="Campsites"></section>
-        </main>
+      <!-- Viewpoinnts -->
+      <section id="Viewpoints" aria-labelledby="viewpoints-title">
+        <h2 id="viewpoints-title">Top Viewpoints</h2>
+        <div class="grid">
+          <article class="card">
+            <img>
+            <div class="box">
+              <h3><a href="/viewpoints/tunnel-view.html">Tunnel View</a></h3>
+              <p class="meta">Drive-up • Best at sunset</p>
+            </div>
+          </article>
+        </div>
+      </section>
 
-        <nav aria-label="Breadcrumb">
-            <a href="../index.html">Home</a> › Yosemite National Park
-          </nav>
-    </body>
+      <!--Campsites -->
+      <section id="Campsites" aria-labelledby="campsites-title">
+        <h2 id="campsites-title">Top Campsites</h2>
+        <div class="grid">
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

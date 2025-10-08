@@ -1,0 +1,32 @@
+/* public/styles/tokens.css */
+:root {
+    --color-bg: #0f172a;                 
+    --color-header-bg: #0b1220;         
+    --color-text: #e5e7eb;               
+    --color-text-header: #f8fafc;        
+    --color-accent: #38bdf8;           
+    --color-card: #111827;              
+    --color-border: #1f2937;             
+    --color-muted: #94a3b8;            
+  
+    --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+  
+    --radius: 12px;
+    --shadow-sm: 0 4px 10px rgba(0,0,0,.08);
+    --shadow-md: 0 8px 20px rgba(0,0,0,.12);
+
+    --font-display:
+    ui-rounded,                  
+    "Arial Rounded MT Bold",    
+    "Avenir Next Rounded",       
+    system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  
