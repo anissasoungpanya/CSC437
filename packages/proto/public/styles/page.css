@@ -8,28 +8,24 @@ body {
 
 body {
   margin: 0;
-  font-family: var(
-    --font-sans,
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    Inter,
-    Arial,
-    sans-serif
-  );
+  font-family: var(--font-body);
+  font-size: var(--fs-2);
   color: var(--color-text, #e5e7eb);
   background: var(--color-bg, #0f172a);
   line-height: 1.5;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: 0.2px;
+  letter-spacing: .2px;
+  line-height: 1.2;
 }
+
+h1 { font-size: var(--fs-5); margin: 0 0 .25em; }
+h2 { font-size: var(--fs-4); margin: 0 0 .5em; }
+h3 { font-size: var(--fs-3); margin: 0; }
+
+.meta { font-size: var(--fs-1); opacity: .9; }
 
 header {
   background: var(--color-header-bg, #0b1220);
@@ -39,9 +35,6 @@ header {
   text-align: center;
 }
 
-header h1 {
-  margin: 0 0 8px;
-}
 header p {
   margin: 0;
   color: rgba(255, 255, 255, 0.9);
@@ -67,9 +60,6 @@ main {
 }
 section {
   margin: 28px 0;
-}
-h2 {
-  margin: 0 0 14px;
 }
 
 .grid {
@@ -103,10 +93,11 @@ h2 {
 .box {
   padding: 14px;
 }
-.card h3 {
+/*.card h3 {
   margin: 0;
   font-size: 1.05rem;
-}
+}*/
+
 .meta {
   color: var(--color-muted, #000000);
   font-size: 0.9rem;
@@ -126,4 +117,12 @@ header {
 }
 header p {
   color: rgba(255, 255, 255, 0.9);
+}
+
+svg.icon {
+  display: inline-block;
+  width: 1.35em;      /* size relative to text */
+  height: 1.35em;
+  vertical-align: text-bottom;
+  fill: currentColor; /* inherit text color */
 }

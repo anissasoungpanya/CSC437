@@ -4,10 +4,12 @@
     <meta charset="utf-8" />
     <title>Zion National Park</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Shared styles -->
     <link rel="stylesheet" href="/styles/tokens.css" />
     <link rel="stylesheet" href="/styles/page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <!-- Breadcrumbs -->
@@ -23,7 +25,12 @@
     <main>
     <!--Hikes-->
       <section id="Hikes" aria-labelledby="hikes-title">
-        <h2 id="hikes-title">Top Hikes</h2>
+        <h2 id="hikes-title">
+          <svg class="icon" aria-hidden="true">
+            <use href="/icons/outdoors.svg#icon-hike"></use>
+          </svg>
+          Top Hikes
+        </h2>
         <div class="grid">
           <article class="card">
             <img>
@@ -51,7 +58,12 @@
       <!--Viewpoins-->
       <section id="Viewpoints">
         <section id="Viewpoints" aria-labelledby="viewpoints-title">
-            <h2 id="viewpoints-title">Top Viewpoints</h2>
+            <h2 id="viewpoints-title">
+              <svg class="icon" aria-hidden="true">
+                <use href="/icons/outdoors.svg#icon-view"></use>
+              </svg>
+            Top Viewpoints
+          </h2>
             <div class="grid">
             </div>
         </section>
