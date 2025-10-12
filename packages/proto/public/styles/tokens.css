@@ -33,5 +33,23 @@
     --fs-3: 1.25rem;  /* h3 */
     --fs-4: 1.5rem;   /* h2 */
     --fs-5: 2rem;     /* h1 */
+
+   --container-max: 1100px;
+   --container-pad-x: var(--space-4);
+
+   --grid-columns: 12;        
+   --grid-gap: var(--space-3); 
+
+   --bp-sm: 480px;
+   --bp-md: 768px;
+   --bp-lg: 1024px;
+   --bp-xl: 1280px;
+
+   --header-pad-y: calc(var(--space-6) * 2);
+   --header-pad-x: var(--space-4);
+
+   --z-nav: 100;
+   --z-overlay: 1000;
+
   }
   
