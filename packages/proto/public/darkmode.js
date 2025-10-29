@@ -4,13 +4,12 @@ function initDarkMode() {
     if (!input || !body) return;
   
     const relayHost = input.closest("label") || input.parentElement || input;
-  
     const relayChangeToCustom = (event) => {
-      event.stopPropagation(); 
+      event.stopPropagation();
       const checked = !!event.target.checked;
       const custom = new CustomEvent("darkmode:toggle", {
         bubbles: true,
-        detail: { checked }
+        detail: { checked },
       });
       relayHost.dispatchEvent(custom);
     };
@@ -25,18 +24,14 @@ function initDarkMode() {
     };
     body.addEventListener("darkmode:toggle", onDarkModeToggle);
   
-    let initial = null;
+    let initial = false;
     try {
       const stored = localStorage.getItem("prefers-darkmode");
       if (stored === "true" || stored === "false") initial = stored === "true";
     } catch (_) {}
   
-    if (initial === null) {
-      initial = false;
-    }
-  
-    input.checked = !!initial;
-    body.classList.toggle("dark-mode", !!initial);
+    input.checked = initial;
+    body.classList.toggle("dark-mode", initial);
   }
   
   if (document.readyState === "loading") {
