@@ -1,0 +1,83 @@
+{
+    "hikes": [
+      {
+        "title": "Angels Landing (Permits Required)",
+        "href": "/zion/hikes/angels-landing.html",
+        "subtitle": "5.4 mi • 1,500 ft gain • Strenuous",
+        "imgSrc": "/images/zion/hikes/angels-landing.jpg"
+      },
+      {
+        "title": "The Narrows",
+        "href": "/zion/hikes/narrows.html",
+        "subtitle": "Up to 9.4 mi • River wade • Moderate",
+        "imgSrc": "/images/zion/hikes/narrows.jpg"
+      },
+      {
+        "title": "The Subway (Permits Required)",
+        "href": "/zion/hikes/subway.html",
+        "subtitle": "~9 mi • Route-finding • Strenuous",
+        "imgSrc": "/images/zion/hikes/subway.jpg"
+      }
+    ],
+    "viewpoints": [
+      {
+        "title": "Canyon Overlook",
+        "href": "/zion/viewpoints/canyon-overlook.html",
+        "subtitle": "Classic Zion canyon vista",
+        "imgSrc": "/images/zion/viewpoints/canyon-overlook.jpg"
+      },
+      {
+        "title": "Canyon Junction Bridge (Watchman)",
+        "href": "/zion/viewpoints/watchman.html",
+        "subtitle": "Iconic sunset composition",
+        "imgSrc": "/images/zion/viewpoints/watchman.jpg"
+      },
+      {
+        "title": "Timber Creek Overlook",
+        "href": "/zion/viewpoints/timber-creek.html",
+        "subtitle": "Kolob Canyons panorama",
+        "imgSrc": "/images/zion/viewpoints/timber-creek.jpg"
+      }
+    ],
+    "lodging": [
+      {
+        "title": "Zion Lodge",
+        "href": "/zion/lodging/zion-lodge.html",
+        "subtitle": "Only in-park lodging",
+        "imgSrc": "/images/zion/lodging/zion-lodge.jpg"
+      },
+      {
+        "title": "Cable Mountain Lodge",
+        "href": "/zion/lodging/cable-mountain.html",
+        "subtitle": "Steps from park entrance",
+        "imgSrc": "/images/zion/lodging/cable-mountain.jpg"
+      },
+      {
+        "title": "Cliffrose Springdale",
+        "href": "/zion/lodging/cliffrose.html",
+        "subtitle": "Riverside resort vibes",
+        "imgSrc": "/images/zion/lodging/cliffrose.jpg"
+      }
+    ],
+    "activities": [
+      {
+        "title": "Canyoneering",
+        "href": "/zion/activities/canyoneering.html",
+        "subtitle": "Guided slot-canyon adventure",
+        "imgSrc": "/images/zion/activities/canyoneering.jpg"
+      },
+      {
+        "title": "Cycling Zion Canyon",
+        "href": "/zion/activities/cycling.html",
+        "subtitle": "Ride the scenic drive",
+        "imgSrc": "/images/zion/activities/cycling.jpg"
+      },
+      {
+        "title": "Scenic Shuttle Tour",
+        "href": "/zion/activities/scenic-shuttle.html",
+        "subtitle": "Hop-on, hop-off viewpoints",
+        "imgSrc": "/images/zion/activities/scenic-shuttle.jpg"
+      }
+    ]
+  }
+  

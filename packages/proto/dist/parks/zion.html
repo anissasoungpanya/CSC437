@@ -13,6 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Baloo+2:wght@600;700&display=swap"
       rel="stylesheet"
     />
+    <script type="module" crossorigin src="/assets/zion-Dr0XJsWN.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/park-card-BGfeYhhJ.js">
   </head>
   <body>
     <!-- Breadcrumbs -->
@@ -33,131 +35,10 @@
       </label>
     </header>
 
-    <main>
-      <!-- Hikes -->
-      <section id="Hikes" aria-labelledby="hikes-title">
-        <h2 id="hikes-title">
-          <svg class="icon" aria-hidden="true">
-            <use href="/icons/outdoors.svg#icon-hike"></use>
-          </svg>
-          Top Hikes
-        </h2>
-        <div class="grid">
-          <park-card
-            href="/zion/hikes/angels-landing.html"
-            subtitle="5.4 mi • 1,500 ft gain • Strenuous"
-          >
-            Angels Landing (Permits Required)
-          </park-card>
+    <park-grid src="/data/zion.json"></park-grid> 
 
-          <park-card
-            href="/zion/hikes/narrows.html"
-            subtitle="Up to 9.4 mi • River wade • Moderate"
-          >
-            The Narrows
-          </park-card>
-
-          <park-card
-            href="/zion/hikes/subway.html"
-            subtitle="~9 mi • Route-finding • Strenuous"
-          >
-            The Subway (Permits Required)
-          </park-card>
-        </div>
-      </section>
-
-      <!-- Viewpoints -->
-      <section id="Viewpoints" aria-labelledby="viewpoints-title">
-        <h2 id="viewpoints-title">
-          <svg class="icon" aria-hidden="true">
-            <use href="/icons/outdoors.svg#icon-view"></use>
-          </svg>
-          Top Viewpoints
-        </h2>
-        <div class="grid">
-          <park-card
-            href="/zion/viewpoints/canyon-overlook.html"
-            subtitle="Classic Zion canyon vista"
-          >
-            Canyon Overlook
-          </park-card>
-
-          <park-card
-            href="/zion/viewpoints/watchman.html"
-            subtitle="Iconic sunset composition"
-          >
-            Canyon Junction Bridge (Watchman)
-          </park-card>
-
-          <park-card
-            href="/zion/viewpoints/timber-creek.html"
-            subtitle="Kolob Canyons panorama"
-          >
-            Timber Creek Overlook
-          </park-card>
-        </div>
-      </section>
-
-      <!-- Lodging -->
-      <section id="lodging" aria-labelledby="lodging-title">
-        <h2 id="lodging-title">Top Lodging Locations</h2>
-        <div class="grid">
-          <park-card
-            href="/zion/lodging/zion-lodge.html"
-            subtitle="Only in-park lodging"
-          >
-            Zion Lodge
-          </park-card>
-
-          <park-card
-            href="/zion/lodging/cable-mountain.html"
-            subtitle="Steps from park entrance"
-          >
-            Cable Mountain Lodge
-          </park-card>
-
-          <park-card
-            href="/zion/lodging/cliffrose.html"
-            subtitle="Riverside resort vibes"
-          >
-            Cliffrose Springdale
-          </park-card>
-        </div>
-      </section>
-
-      <!-- Activities -->
-      <section id="activities" aria-labelledby="activities-title">
-        <h2 id="activities-title">Top Activities</h2>
-        <div class="grid">
-          <park-card
-            href="/zion/activities/canyoneering.html"
-            subtitle="Guided slot-canyon adventure"
-          >
-            Canyoneering
-          </park-card>
-
-          <park-card
-            href="/zion/activities/cycling.html"
-            subtitle="Ride the scenic drive"
-          >
-            Cycling Zion Canyon
-          </park-card>
-
-          <park-card
-            href="/zion/activities/scenic-shuttle.html"
-            subtitle="Hop-on, hop-off viewpoints"
-          >
-            Scenic Shuttle Tour
-          </park-card>
-        </div>
-      </section>
     </main>
 
-    <script type="module">
-      import { define } from "@calpoly/mustang";
-      import { ParkCardElement } from "/src/components/park-card.ts";
-      define({ "park-card": ParkCardElement });
-    </script>
     <script type="module" src="/darkmode.js"></script>
   </body>
 </html>

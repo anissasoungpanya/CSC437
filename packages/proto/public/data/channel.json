@@ -1,0 +1,83 @@
+{
+    "hikes": [
+      {
+        "title": "Cavern Point Loop (Santa Cruz)",
+        "href": "/channel-islands/hikes/cavern-point-loop.html",
+        "subtitle": "2.0 mi • Clifftop views • Easy",
+        "imgSrc": "/images/channel/hikes/cavern-point-loop.jpg"
+      },
+      {
+        "title": "Smuggler’s Cove (Santa Cruz)",
+        "href": "/channel-islands/hikes/smugglers-cove.html",
+        "subtitle": "7.5 mi • Coastal climb • Moderate",
+        "imgSrc": "/images/channel/hikes/smugglers-cove.jpg"
+      },
+      {
+        "title": "Inspiration Point (Anacapa)",
+        "href": "/channel-islands/hikes/inspiration-point-anacapa.html",
+        "subtitle": "1.5 mi • Iconic overlook • Easy",
+        "imgSrc": "/images/channel/hikes/inspiration-point.jpg"
+      }
+    ],
+    "viewpoints": [
+      {
+        "title": "Inspiration Point (Anacapa)",
+        "href": "/channel-islands/viewpoints/inspiration-point.html",
+        "subtitle": "Sea arch & island chain",
+        "imgSrc": "/images/channel/viewpoints/inspiration-point.jpg"
+      },
+      {
+        "title": "Potato Harbor Overlook (Santa Cruz)",
+        "href": "/channel-islands/viewpoints/potato-harbor.html",
+        "subtitle": "Turquoise cove cliffs",
+        "imgSrc": "/images/channel/viewpoints/potato-harbor.jpg"
+      },
+      {
+        "title": "Cavern Point (Santa Cruz)",
+        "href": "/channel-islands/viewpoints/cavern-point.html",
+        "subtitle": "Panoramic coastal bluffs",
+        "imgSrc": "/images/channel/viewpoints/cavern-point.jpg"
+      }
+    ],
+    "lodging": [
+      {
+        "title": "Scorpion Canyon Campground (Santa Cruz)",
+        "href": "/channel-islands/lodging/scorpion-canyon-campground.html",
+        "subtitle": "Island camping near harbor",
+        "imgSrc": "/images/channel/lodging/scorpion-canyon.jpg"
+      },
+      {
+        "title": "Anacapa Island Campground",
+        "href": "/channel-islands/lodging/anacapa-campground.html",
+        "subtitle": "Clifftop island campsites",
+        "imgSrc": "/images/channel/lodging/anacapa-campground.jpg"
+      },
+      {
+        "title": "Ventura Harbor Hotels (Mainland)",
+        "href": "/channel-islands/lodging/ventura-harbor-hotels.html",
+        "subtitle": "Convenient boat departures",
+        "imgSrc": "/images/channel/lodging/ventura-harbor-hotels.jpg"
+      }
+    ],
+    "activities": [
+      {
+        "title": "Sea Kayaking & Caves",
+        "href": "/channel-islands/activities/sea-kayaking.html",
+        "subtitle": "Explore sea arches & caverns",
+        "imgSrc": "/images/channel/activities/sea-kayaking.jpg"
+      },
+      {
+        "title": "Snorkeling & Diving",
+        "href": "/channel-islands/activities/snorkeling.html",
+        "subtitle": "Kelp forests & wildlife",
+        "imgSrc": "/images/channel/activities/snorkeling.jpg"
+      },
+      {
+        "title": "Wildlife Watching",
+        "href": "/channel-islands/activities/wildlife-watching.html",
+        "subtitle": "Whales, seabirds, foxes",
+        "imgSrc": "/images/channel/activities/wildlife-watching.jpg"
+      }
+    ]
+  }
+  

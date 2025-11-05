@@ -1,0 +1,83 @@
+{
+    "hikes": [
+      {
+        "title": "Mist Trail → Vernal & Nevada Falls",
+        "href": "/yosemite/hikes/mist-trail.html",
+        "subtitle": "7.0 mi • 2,000 ft gain • Moderate–Strenuous",
+        "imgSrc": "/images/yosemite/hikes/mist-trail.jpg"
+      },
+      {
+        "title": "Half Dome (Permits Required)",
+        "href": "/yosemite/hikes/half-dome.html",
+        "subtitle": "14–16 mi • 4,800 ft gain • Strenuous",
+        "imgSrc": "/images/yosemite/hikes/half-dome.jpg"
+      },
+      {
+        "title": "Clouds Rest",
+        "href": "/yosemite/hikes/clouds-rest.html",
+        "subtitle": "12.5 mi • 3,000 ft gain • Strenuous",
+        "imgSrc": "/images/yosemite/hikes/clouds-rest.jpg"
+      }
+    ],
+    "viewpoints": [
+      {
+        "title": "Tunnel View",
+        "href": "/yosemite/viewpoints/tunnel-view.html",
+        "subtitle": "Iconic Yosemite Valley vista",
+        "imgSrc": "/images/yosemite/viewpoints/tunnel-view.jpg"
+      },
+      {
+        "title": "Glacier Point",
+        "href": "/yosemite/viewpoints/glacier-point.html",
+        "subtitle": "Panoramic peak perspective",
+        "imgSrc": "/images/yosemite/viewpoints/glacier-point.jpg"
+      },
+      {
+        "title": "Taft Point",
+        "href": "/yosemite/viewpoints/taft-point.html",
+        "subtitle": "Cliffside thrill and sunset spot",
+        "imgSrc": "/images/yosemite/viewpoints/taft-point.jpg"
+      }
+    ],
+    "lodging": [
+      {
+        "title": "The Ahwahnee",
+        "href": "/yosemite/lodging/ahwahnee.html",
+        "subtitle": "Historic luxury in the valley",
+        "imgSrc": "/images/yosemite/lodging/ahwahnee.jpg"
+      },
+      {
+        "title": "Yosemite Valley Lodge",
+        "href": "/yosemite/lodging/yv-lodge.html",
+        "subtitle": "Steps from Yosemite Falls",
+        "imgSrc": "/images/yosemite/lodging/yv-lodge.jpg"
+      },
+      {
+        "title": "Wawona Hotel",
+        "href": "/yosemite/lodging/wawona.html",
+        "subtitle": "Victorian charm and quiet escape",
+        "imgSrc": "/images/yosemite/lodging/wawona.jpg"
+      }
+    ],
+    "activities": [
+      {
+        "title": "Rock Climbing",
+        "href": "/yosemite/activities/climbing.html",
+        "subtitle": "World-famous climbing locations",
+        "imgSrc": "/images/yosemite/activities/climbing.jpg"
+      },
+      {
+        "title": "Exploring Mariposa Grove",
+        "href": "/yosemite/activities/yv-lodge.html",
+        "subtitle": "Walk among giant sequoias",
+        "imgSrc": "/images/yosemite/activities/mariposa-grove.jpg"
+      },
+      {
+        "title": "Rafting the Merced River",
+        "href": "/yosemite/activities/wawona.html",
+        "subtitle": "Scenic float through the valley",
+        "imgSrc": "/images/yosemite/activities/merced-rafting.jpg"
+      }
+    ]
+  }
+  

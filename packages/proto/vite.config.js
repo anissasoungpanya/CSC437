@@ -9,9 +9,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),             
-        yosemite: resolve(__dirname, 'yosemite.html'),    
-        zion: resolve(__dirname, 'zion.html'),            
-        channel: resolve(__dirname, 'channel.html') 
+        yosemite: resolve(__dirname, '/parks/yosemite.html'),    
+        zion: resolve(__dirname, '/parks/zion.html'),            
+        channel: resolve(__dirname, '/parks/channel.html') 
       }
     }
   }
