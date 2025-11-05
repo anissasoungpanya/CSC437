@@ -1,16 +1,19 @@
 {
   "name": "proto",
-  "version": "1.0.0",
-  "description": "",
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "public/index.html",
+  "private": true,
+  "main": "index.html",
   "scripts": {
-    "start": "http-server -p 3000",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx vite",
+    "build": "npx tsc && npx vite build",
+    "start": "http-server dist -p 3000"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21"
   },
   "dependencies": {
-    "http-server": "^14.1.1"
+    "@calpoly/mustang": "^1.0.15",
+    "lit": "^3.3.1"
   }
 }

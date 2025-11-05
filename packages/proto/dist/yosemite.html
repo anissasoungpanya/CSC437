@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Yosemite National Park</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/styles/tokens.css" />
+    <link rel="stylesheet" href="/styles/page.css" />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Baloo+2:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/yosemite-Dr0XJsWN.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/park-card-BGfeYhhJ.js">
+  </head>
+  <body>
+    <!-- Breadcrumbs -->
+    <nav
+      aria-label="Breadcrumb"
+      style="max-width: 1100px; margin: 8px auto 0; padding: 0 16px"
+    >
+      <a href="/index.html">Home</a> ›
+      <span aria-current="page">Yosemite National Park</span>
+    </nav>
+
+    <header>
+      <h1>Yosemite National Park</h1>
+      <p>
+        Granite cliffs, thundering waterfalls, giant sequoias, and endless
+        trails.
+      </p>
+      <label class="theme-toggle">
+        <input type="checkbox" id="dark-mode-toggle" autocomplete="off" />
+        Dark mode
+      </label>
+    </header>
+
+    <main>
+      <!-- Hikes -->
+      <section aria-labelledby="hikes-title" id="Hikes">
+        <h2 id="hikes-title">
+          <svg class="icon" aria-hidden="true">
+            <use href="/icons/outdoors.svg#icon-hike"></use>
+          </svg>
+          Top Hikes
+        </h2>
+        <div class="grid">
+          <park-card
+            href="/yosemite/hikes/mist-trail.html"
+            subtitle="7.0 mi • 2,000 ft gain • Moderate–Strenuous"
+          >
+            Mist Trail → Vernal &amp; Nevada Falls
+          </park-card>
+
+          <park-card
+            href="/yosemite/hikes/half-dome.html"
+            subtitle="14–16 mi • 4,800 ft gain • Strenuous"
+          >
+            Half Dome (Permits Required)
+          </park-card>
+
+          <park-card
+            href="/yosemite/hikes/clouds-rest.html"
+            subtitle="12.5 mi • 3,000 ft gain • Strenuous"
+          >
+            Clouds Rest
+          </park-card>
+        </div>
+      </section>
+
+      <!-- Viewpoinnts -->
+      <section id="Viewpoints" aria-labelledby="viewpoints-title">
+        <h2 id="viewpoints-title">
+          <svg class="icon" aria-hidden="true">
+            <use href="/icons/outdoors.svg#icon-view"></use>
+          </svg>
+          Top Viewpoints
+        </h2>
+        <div class="grid">
+          <park-card
+            href="/yosemite/viewpoints/tunnel-view.html"
+            subtitle="Iconic Yosemite Valley vista"
+          >
+            Tunnel View
+          </park-card>
+
+          <park-card
+            href="/yosemite/viewpoints/glacier-point.html"
+            subtitle="Panoramic peak perspective"
+          >
+            Glacier Point
+          </park-card>
+
+          <park-card
+            href="/yosemite/viewpoints/taft-point.html"
+            subtitle="Cliffside thrill and sunset spot"
+          >
+            Taft Point
+          </park-card>
+        </div>
+      </section>
+
+      <!--Lodging -->
+      <section id="lodging" aria-labelledby="lodging-title">
+        <h2 id="lodging-title">Top Lodging Locations</h2>
+        <div class="grid">
+          <park-card
+            href="/yosemite/lodging/ahwahnee.html"
+            subtitle="Historic luxury in the valley"
+          >
+            The Ahwahnee
+          </park-card>
+
+          <park-card
+            href="/yosemite/lodging/yv-lodge.html"
+            subtitle="Steps from Yosemite Falls"
+          >
+            Yosemite Valley Lodge
+          </park-card>
+
+          <park-card
+            href="/yosemite/lodging/wawona.html"
+            subtitle="Victorian charm and quiet escape"
+          >
+            Wawona Hotel
+          </park-card>
+        </div>
+      </section>
+
+      <!--Activities -->
+      <section id="activities" aria-labelledby="activities-title">
+        <h2 id="activities-title">Top Activities</h2>
+        <div class="grid">
+          <park-card
+            href="/yosemite/activities/climbing.html"
+            subtitle="World-famous climbing locations"
+          >
+            Rock Climbing
+          </park-card>
+
+          <park-card
+            href="/yosemite/activities/yv-lodge.html"
+            subtitle="Walk among giant sequoias"
+          >
+            Exploring Mariposa Grove
+          </park-card>
+
+          <park-card
+            href="/yosemite/activities/wawona.html"
+            subtitle="Scenic float through the valley"
+          >
+            Rafting the Merced River
+          </park-card>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/darkmode.js"></script>
+  </body>
+</html>

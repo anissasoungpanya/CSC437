@@ -63,5 +63,12 @@
       <li><a href="/proto/public/parks/channel.html">Channel Islands National Park</a></li>
     </ul>
   </body>
-  <script type="module" src="./darkmode.js"></script>
+  <script type="module" src="/darkmode.js"></script>
+  <script type="module">
+    import { define } from "@calpoly/mustang";
+    import { ParkCardElement } from "/src/components/park-card.js";
+    define({ "park-card": ParkCardElement });
+  </script>
 </html>
+
+

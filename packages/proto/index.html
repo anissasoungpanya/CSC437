@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>National Parks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/styles/tokens.css" />
+    <link rel="stylesheet" href="/styles/page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <header>
+      <h1>National Parks</h1>
+      <p>
+        Select a park to explore hikes, viewpoints, lodging, wildlife and foliage.
+      </p>
+      <label class="theme-toggle">
+        <input type="checkbox" id="dark-mode-toggle" autocomplete="off" />
+        Dark mode
+      </label>
+    </header>
+
+    <main>
+      <section aria-labelledby="featured-title">
+        <h2 id="featured-title">Featured Parks</h2>
+
+        <div class="grid">
+          <!-- Yosemite -->
+          <article class="card">
+            <img src="/images/yosemite.jpeg">
+            <div class="box">
+              <h3><a href="/parks/yosemite.html">Yosemite National Park</a></h3>
+              <p class="meta">California | Granite cliffs, waterfalls, giant sequoias</p>
+            </div>
+          </article>
+
+          <!-- Zion -->
+          <article class="card">
+            <img src="/images/zion.jpeg">
+            <div class="box">
+              <h3><a href="/parks/zion.html">Zion National Park</a></h3>
+              <p class="meta">Utah | Slot canyons, soaring sandstone, river hikes</p>
+            </div>
+          </article>
+
+          <!-- Channel Islands -->
+          <article class="card">
+            <img src="/images/channel.jpeg">
+            <div class="box">
+              <h3><a href="/parks/channel.html">Channel Islands National Park</a></h3>
+              <p class="meta">California | Sea caves, wildlife, remote beaches</p>
+            </div>
+          </article>
+          </div>
+      </section>
+    </main>
+    <ul>
+      <li><a href="/proto/public/parks/yosemite.html">Yosemite National Park</a></li>
+      <li><a href="/proto/public/parks/zion.html">Zion National Park</a></li>
+      <li><a href="/proto/public/parks/channel.html">Channel Islands National Park</a></li>
+    </ul>
+  </body>
+  <script type="module" src="/public/darkmode.js"></script>
+  <script type="module">
+    import { define } from "@calpoly/mustang";
+    import { ParkCardElement } from "/src/components/park-card.ts";
+    define({ "park-card": ParkCardElement });
+  </script>
+</html>
+
+
