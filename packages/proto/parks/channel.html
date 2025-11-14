@@ -31,14 +31,15 @@
       </label>
     </header>
 
-    <park-grid src="/data/zion.json"></park-grid> 
-
+    <main>
+      <park-grid src="/api/parks/channel"></park-grid>
     </main>
 
     <script type="module">
       import { define } from "@calpoly/mustang";
       import { ParkCardElement } from "/src/components/park-card.ts";
-      define({ "park-card": ParkCardElement });
+      import { ParkGridElement } from "/src/components/park-grid.ts";
+      define({ "park-card": ParkCardElement, "park-grid": ParkGridElement });
     </script>
     <script type="module" src="/darkmode.js"></script>
   </body>

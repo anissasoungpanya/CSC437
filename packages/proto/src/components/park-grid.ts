@@ -20,7 +20,21 @@ export class ParkGridElement extends LitElement {
   @state() private data?: ParkData;
 
   static styles = css`
-    section { margin-bottom: 2rem; }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    h2 .icon {
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      vertical-align: middle;
+    }
     .grid {
       display: grid;
       gap: 16px;
@@ -76,5 +90,3 @@ export class ParkGridElement extends LitElement {
     `;
   }
 }
-
-customElements.define("park-grid", ParkGridElement);
