@@ -9,8 +9,7 @@ function loadJSON(filePath: string) {
   return JSON.parse(readFileSync(filePath, "utf-8"));
 }
 
-// Resolve path to data directory relative to server directory
-// When running from dist/, go up to packages/ then into proto/public/data
+
 const dataDir = join(process.cwd(), "../proto/public/data");
 const channelData = loadJSON(join(dataDir, "channel.json"));
 const yosemiteData = loadJSON(join(dataDir, "yosemite.json"));
@@ -19,7 +18,7 @@ const zionData = loadJSON(join(dataDir, "zion.json"));
 async function seed() {
   try {
     await connect("webDB");
-    console.log("🌱 Starting database seeding...");
+    console.log("Starting database seeding");
 
     const parks: ParkData[] = [
       {
@@ -50,13 +49,13 @@ async function seed() {
 
     for (const park of parks) {
       const saved = await Parks.upsert(park);
-      console.log(`✅ Seeded park: ${saved.name} (${saved.parkId})`);
+      console.log(`Seeded park: ${saved.name} (${saved.parkId})`);
     }
 
-    console.log("🎉 Database seeding completed!");
+    console.log("Database seeding completed!");
     process.exit(0);
   } catch (error) {
-    console.error("❌ Error seeding database:", error);
+    console.error("Error seeding database:", error);
     process.exit(1);
   }
 }

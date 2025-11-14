@@ -10,5 +10,5 @@ const uri = `mongodb+srv://${user}:${pwd}@${host}/${db}?retryWrites=true&w=major
 
 export async function connectDB() {
   await mongoose.connect(uri, { serverSelectionTimeoutMS: 8000 });
-  console.log("✅ MongoDB connected");
+  console.log("MongoDB connected");
 }

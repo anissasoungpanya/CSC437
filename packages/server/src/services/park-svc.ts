@@ -40,6 +40,22 @@ function get(parkId: string): Promise<ParkData | null> {
   return ParkModel.findOne({ parkId }).lean();
 }
 
+function create(doc: ParkData): Promise<ParkData> {
+  const park = new ParkModel(doc);
+  return park.save().then((saved) => saved.toObject() as ParkData);
+}
+
+function update(parkId: string, doc: ParkData): Promise<ParkData> {
+  return ParkModel.findOneAndUpdate(
+    { parkId },
+    { ...doc, parkId, updatedAt: new Date() },
+    { new: true, runValidators: true }
+  ).then((updated) => {
+    if (!updated) throw `${parkId} not updated`;
+    return updated.toObject() as ParkData;
+  });
+}
+
 function upsert(doc: ParkData): Promise<ParkData> {
   return ParkModel.findOneAndUpdate(
     { parkId: doc.parkId },
@@ -48,8 +64,10 @@ function upsert(doc: ParkData): Promise<ParkData> {
   ).lean() as unknown as Promise<ParkData>;
 }
 
-function remove(parkId: string): Promise<boolean> {
-  return ParkModel.deleteOne({ parkId }).then((r) => r.deletedCount === 1);
+function remove(parkId: string): Promise<void> {
+  return ParkModel.findOneAndDelete({ parkId }).then((deleted) => {
+    if (!deleted) throw `${parkId} not deleted`;
+  });
 }
 
-export default { index, get, upsert, remove };
+export default { index, get, create, update, upsert, remove };

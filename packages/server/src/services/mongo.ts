@@ -21,7 +21,6 @@ function getMongoURI(dbname: string) {
 }
 
 export async function connect(dbname: string): Promise<void> {
-  // Check if already connected
   if (mongoose.connection.readyState === 1) {
     console.log("MongoDB already connected");
     return;
@@ -29,18 +28,17 @@ export async function connect(dbname: string): Promise<void> {
 
   try {
     await mongoose.connect(getMongoURI(dbname));
-    console.log("✅ MongoDB connected successfully");
-
-    // Log connection status
+    console.log("MongoDB connected successfully");
+    
     mongoose.connection.on("error", (err) => {
-      console.error("❌ MongoDB connection error:", err);
+      console.error("MongoDB connection error:", err);
     });
 
     mongoose.connection.on("disconnected", () => {
-      console.log("⚠️ MongoDB disconnected");
+      console.log("MongoDB disconnected");
     });
   } catch (error) {
-    console.error("❌ Failed to connect to MongoDB:", error);
+    console.error("Failed to connect to MongoDB:", error);
     throw error;
   }
 }

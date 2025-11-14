@@ -56,6 +56,20 @@ function index() {
 function get(parkId) {
   return ParkModel.findOne({ parkId }).lean();
 }
+function create(doc) {
+  const park = new ParkModel(doc);
+  return park.save().then((saved) => saved.toObject());
+}
+function update(parkId, doc) {
+  return ParkModel.findOneAndUpdate(
+    { parkId },
+    { ...doc, parkId, updatedAt: /* @__PURE__ */ new Date() },
+    { new: true, runValidators: true }
+  ).then((updated) => {
+    if (!updated) throw `${parkId} not updated`;
+    return updated.toObject();
+  });
+}
 function upsert(doc) {
   return ParkModel.findOneAndUpdate(
     { parkId: doc.parkId },
@@ -64,6 +78,8 @@ function upsert(doc) {
   ).lean();
 }
 function remove(parkId) {
-  return ParkModel.deleteOne({ parkId }).then((r) => r.deletedCount === 1);
+  return ParkModel.findOneAndDelete({ parkId }).then((deleted) => {
+    if (!deleted) throw `${parkId} not deleted`;
+  });
 }
-var park_svc_default = { index, get, upsert, remove };
+var park_svc_default = { index, get, create, update, upsert, remove };
