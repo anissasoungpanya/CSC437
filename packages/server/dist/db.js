@@ -40,7 +40,7 @@ const db = process.env.MONGO_DB ?? "webDB";
 const uri = `mongodb+srv://${user}:${pwd}@${host}/${db}?retryWrites=true&w=majority`;
 async function connectDB() {
   await import_mongoose.default.connect(uri, { serverSelectionTimeoutMS: 8e3 });
-  console.log("\u2705 MongoDB connected");
+  console.log("MongoDB connected");
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

@@ -25,6 +25,7 @@ var import_express = __toESM(require("express"));
 var import_path = __toESM(require("path"));
 var import_mongo = require("./services/mongo");
 var import_parks = __toESM(require("./routes/parks"));
+var import_auth = __toESM(require("./routes/auth"));
 const app = (0, import_express.default)();
 app.use(import_express.default.json());
 const staticDir = process.env.STATIC || import_path.default.join(__dirname, "../../proto/dist");
@@ -32,7 +33,8 @@ const staticPath = import_path.default.resolve(staticDir);
 console.log(`Serving static files from: ${staticPath}`);
 app.use(import_express.default.static(staticPath));
 app.get("/hello", (_req, res) => res.send("Hello from server!"));
-app.use("/api/parks", import_parks.default);
+app.use("/auth", import_auth.default);
+app.use("/api/parks", import_auth.authenticateUser, import_parks.default);
 async function startServer() {
   try {
     await (0, import_mongo.connect)("webDB");

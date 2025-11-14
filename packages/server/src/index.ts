@@ -2,11 +2,11 @@ import express, { Request, Response } from "express";
 import path from "path";
 import { connect } from "./services/mongo";
 import parks from "./routes/parks";
+import auth, { authenticateUser } from "./routes/auth";
 
 const app = express();
 
 app.use(express.json());
-
 
 const staticDir =
   process.env.STATIC || path.join(__dirname, "../../proto/dist");
@@ -16,14 +16,16 @@ app.use(express.static(staticPath));
 
 app.get("/hello", (_req, res) => res.send("Hello from server!"));
 
-app.use("/api/parks", parks);
+app.use("/auth", auth);
+
+app.use("/api/parks", authenticateUser, parks);
 
 async function startServer() {
   try {
     await connect("webDB");
 
-    const PORT = Number(process.env.PORT) || 3000; 
-    const HOST = process.env.HOST || "0.0.0.0"; 
+    const PORT = Number(process.env.PORT) || 3000;
+    const HOST = process.env.HOST || "0.0.0.0";
     app.listen(PORT, HOST, () =>
       console.log(`Server running at http://${HOST}:${PORT}`)
     );

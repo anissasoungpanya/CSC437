@@ -1,5 +1,6 @@
 import { LitElement, html, css } from "lit";
 import { property, state } from "lit/decorators.js";
+import { Observer, Auth } from "@calpoly/mustang";
 
 type CardItem = {
   title: string;
@@ -18,6 +19,29 @@ type ParkData = {
 export class ParkGridElement extends LitElement {
   @property() src?: string;
   @state() private data?: ParkData;
+
+  _authObserver = new Observer<Auth.Model>(this, "parks:auth");
+  _user?: Auth.User;
+
+  connectedCallback() {
+    super.connectedCallback();
+    this._authObserver.observe((auth: Auth.Model) => {
+      this._user = auth.user;
+      // Re-fetch data when auth state changes
+      if (this.src && this._user?.authenticated) {
+        this.hydrate(this.src);
+      }
+    });
+    if (this.src) this.hydrate(this.src);
+  }
+
+  get authorization() {
+    return (
+      this._user?.authenticated && {
+        Authorization: `Bearer ${(this._user as Auth.AuthenticatedUser).token}`,
+      }
+    );
+  }
 
   static styles = css`
     section {
@@ -42,14 +66,18 @@ export class ParkGridElement extends LitElement {
     }
   `;
 
-  connectedCallback() {
-    super.connectedCallback();
-    if (this.src) this.hydrate(this.src);
-  }
-
   async hydrate(src: string) {
-    const res = await fetch(src);
-    if (!res.ok) return;
+    const headers: HeadersInit = {
+      "Content-Type": "application/json",
+      ...this.authorization,
+    };
+    const res = await fetch(src, { headers });
+    if (!res.ok) {
+      if (res.status === 401) {
+        console.error("Unauthorized - please log in");
+      }
+      return;
+    }
     this.data = await res.json();
   }
 

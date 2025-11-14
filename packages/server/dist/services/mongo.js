@@ -56,15 +56,15 @@ async function connect(dbname) {
   }
   try {
     await import_mongoose.default.connect(getMongoURI(dbname));
-    console.log("\u2705 MongoDB connected successfully");
+    console.log("MongoDB connected successfully");
     import_mongoose.default.connection.on("error", (err) => {
-      console.error("\u274C MongoDB connection error:", err);
+      console.error("MongoDB connection error:", err);
     });
     import_mongoose.default.connection.on("disconnected", () => {
-      console.log("\u26A0\uFE0F MongoDB disconnected");
+      console.log("MongoDB disconnected");
     });
   } catch (error) {
-    console.error("\u274C Failed to connect to MongoDB:", error);
+    console.error("Failed to connect to MongoDB:", error);
     throw error;
   }
 }

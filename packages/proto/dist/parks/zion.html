@@ -13,32 +13,36 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Baloo+2:wght@600;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/zion-DQs70tlR.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/park-card-BVAhujMT.js">
-    <link rel="modulepreload" crossorigin href="/assets/park-grid-YXkocnZn.js">
+    <script type="module" crossorigin src="/assets/zion-DzJS2v2V.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/reset.css-CCJaHSFy.js">
+    <link rel="modulepreload" crossorigin href="/assets/park-card-mRY_SDfz.js">
+    <link rel="modulepreload" crossorigin href="/assets/state-DLzfpi_9.js">
+    <link rel="modulepreload" crossorigin href="/assets/park-grid-CVe0wPk2.js">
   </head>
   <body>
-    <!-- Breadcrumbs -->
-    <nav aria-label="Breadcrumb">
-      <a href="../index.html">Home</a> ›
-      <span aria-current="page">Zion National Park</span>
-    </nav>
+    <mu-auth provides="parks:auth">
+      <!-- Breadcrumbs -->
+      <nav aria-label="Breadcrumb">
+        <a href="/index.html">Home</a> ›
+        <span aria-current="page">Zion National Park</span>
+      </nav>
 
-    <header>
-      <h1>Zion National Park</h1>
-      <p>
-        View the top hikes, viewpoints, and campsites to kickstart your next
-        adventure at Zion!
-      </p>
-      <label class="theme-toggle">
-        <input type="checkbox" id="dark-mode-toggle" autocomplete="off" />
-        Dark mode
-      </label>
-    </header>
+      <header>
+        <h1>Zion National Park</h1>
+        <p>
+          View the top hikes, viewpoints, and campsites to kickstart your next
+          adventure at Zion!
+        </p>
+        <label class="theme-toggle">
+          <input type="checkbox" id="dark-mode-toggle" autocomplete="off" />
+          Dark mode
+        </label>
+      </header>
 
-    <main>
-      <park-grid src="/api/parks/zion"></park-grid>
-    </main>
+      <main>
+        <park-grid src="/api/parks/zion"></park-grid>
+      </main>
+    </mu-auth>
 
     <script type="module" src="/darkmode.js"></script>
   </body>

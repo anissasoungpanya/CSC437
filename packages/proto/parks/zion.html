@@ -15,33 +15,39 @@
     />
   </head>
   <body>
-    <!-- Breadcrumbs -->
-    <nav aria-label="Breadcrumb">
-      <a href="../index.html">Home</a> ›
-      <span aria-current="page">Zion National Park</span>
-    </nav>
+    <mu-auth provides="parks:auth">
+      <!-- Breadcrumbs -->
+      <nav aria-label="Breadcrumb">
+        <a href="/index.html">Home</a> ›
+        <span aria-current="page">Zion National Park</span>
+      </nav>
 
-    <header>
-      <h1>Zion National Park</h1>
-      <p>
-        View the top hikes, viewpoints, and campsites to kickstart your next
-        adventure at Zion!
-      </p>
-      <label class="theme-toggle">
-        <input type="checkbox" id="dark-mode-toggle" autocomplete="off" />
-        Dark mode
-      </label>
-    </header>
+      <header>
+        <h1>Zion National Park</h1>
+        <p>
+          View the top hikes, viewpoints, and campsites to kickstart your next
+          adventure at Zion!
+        </p>
+        <label class="theme-toggle">
+          <input type="checkbox" id="dark-mode-toggle" autocomplete="off" />
+          Dark mode
+        </label>
+      </header>
 
-    <main>
-      <park-grid src="/api/parks/zion"></park-grid>
-    </main>
+      <main>
+        <park-grid src="/api/parks/zion"></park-grid>
+      </main>
+    </mu-auth>
 
     <script type="module">
-      import { define } from "@calpoly/mustang";
+      import { define, Auth } from "@calpoly/mustang";
       import { ParkCardElement } from "/src/components/park-card.ts";
       import { ParkGridElement } from "/src/components/park-grid.ts";
-      define({ "park-card": ParkCardElement, "park-grid": ParkGridElement });
+      define({
+        "park-card": ParkCardElement,
+        "park-grid": ParkGridElement,
+        "mu-auth": Auth.Provider,
+      });
     </script>
     <script type="module" src="/darkmode.js"></script>
   </body>

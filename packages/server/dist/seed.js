@@ -36,7 +36,7 @@ const zionData = loadJSON((0, import_path.join)(dataDir, "zion.json"));
 async function seed() {
   try {
     await (0, import_mongo.connect)("webDB");
-    console.log("\u{1F331} Starting database seeding...");
+    console.log("Starting database seeding");
     const parks = [
       {
         parkId: "channel",
@@ -65,12 +65,12 @@ async function seed() {
     ];
     for (const park of parks) {
       const saved = await import_park_svc.default.upsert(park);
-      console.log(`\u2705 Seeded park: ${saved.name} (${saved.parkId})`);
+      console.log(`Seeded park: ${saved.name} (${saved.parkId})`);
     }
-    console.log("\u{1F389} Database seeding completed!");
+    console.log("Database seeding completed!");
     process.exit(0);
   } catch (error) {
-    console.error("\u274C Error seeding database:", error);
+    console.error("Error seeding database:", error);
     process.exit(1);
   }
 }

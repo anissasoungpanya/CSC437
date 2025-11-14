@@ -16,6 +16,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        login: resolve(__dirname, "login.html"),
         yosemite: resolve(__dirname, "parks/yosemite.html"),
         zion: resolve(__dirname, "parks/zion.html"),
         channel: resolve(__dirname, "parks/channel.html"),

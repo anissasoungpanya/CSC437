@@ -11,35 +11,41 @@
   />
 
   <body>
-    <!-- Breadcrumbs -->
-    <nav
-      aria-label="Breadcrumb"
-      style="max-width: 1100px; margin: 8px auto 0; padding: 0 16px"
-    >
-      <a href="/index.html">Home</a> ›
-      <span aria-current="page">Channel Islands National Park</span>
-    </nav>
-    <header>
-      <h1>Channel Islands National Park</h1>
-      <p>
-        View the top hikes, viewpoints, and campsites to kickstart your next
-        adventure at Channel Islands!
-      </p>
-      <label class="theme-toggle">
-        <input type="checkbox" id="dark-mode-toggle" autocomplete="off" />
-        Dark mode
-      </label>
-    </header>
+    <mu-auth provides="parks:auth">
+      <!-- Breadcrumbs -->
+      <nav
+        aria-label="Breadcrumb"
+        style="max-width: 1100px; margin: 8px auto 0; padding: 0 16px"
+      >
+        <a href="/index.html">Home</a> ›
+        <span aria-current="page">Channel Islands National Park</span>
+      </nav>
+      <header>
+        <h1>Channel Islands National Park</h1>
+        <p>
+          View the top hikes, viewpoints, and campsites to kickstart your next
+          adventure at Channel Islands!
+        </p>
+        <label class="theme-toggle">
+          <input type="checkbox" id="dark-mode-toggle" autocomplete="off" />
+          Dark mode
+        </label>
+      </header>
 
-    <main>
-      <park-grid src="/api/parks/channel"></park-grid>
-    </main>
+      <main>
+        <park-grid src="/api/parks/channel"></park-grid>
+      </main>
+    </mu-auth>
 
     <script type="module">
-      import { define } from "@calpoly/mustang";
+      import { define, Auth } from "@calpoly/mustang";
       import { ParkCardElement } from "/src/components/park-card.ts";
       import { ParkGridElement } from "/src/components/park-grid.ts";
-      define({ "park-card": ParkCardElement, "park-grid": ParkGridElement });
+      define({
+        "park-card": ParkCardElement,
+        "park-grid": ParkGridElement,
+        "mu-auth": Auth.Provider,
+      });
     </script>
     <script type="module" src="/darkmode.js"></script>
   </body>
