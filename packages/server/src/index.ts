@@ -69,7 +69,7 @@ async function startServer() {
   try {
     await connect("webDB");
 
-    const PORT = process.env.PORT || 4000;
+    const PORT = process.env.PORT || 3000; // Default to 3000 for csse.dev reverse proxy
     const HOST = process.env.HOST || "0.0.0.0"; // Listen on all interfaces for reverse proxy
     app.listen(PORT, HOST, () =>
       console.log(`Server running at http://${HOST}:${PORT}`)
