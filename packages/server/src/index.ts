@@ -70,8 +70,9 @@ async function startServer() {
     await connect("webDB");
 
     const PORT = process.env.PORT || 4000;
-    app.listen(PORT, () =>
-      console.log(`Server running at http://localhost:${PORT}`)
+    const HOST = process.env.HOST || "0.0.0.0"; // Listen on all interfaces for reverse proxy
+    app.listen(PORT, HOST, () =>
+      console.log(`Server running at http://${HOST}:${PORT}`)
     );
   } catch (error) {
     console.error("Failed to start server:", error);
