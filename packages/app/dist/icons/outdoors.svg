@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="icon-hike" viewBox="0 0 24 24">
+      <circle cx="9" cy="5" r="2"/>
+      <path d="M9 7v6l3 2v7M6 22l4-8M13 6h6v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- Viewpoint: a smple eye -->
+    <symbol id="icon-view" viewBox="0 0 24 24">
+      <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12Z" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="3" fill="currentColor"/>
+    </symbol>
+
+    <!-- Campsite: a tent -->
+    <symbol id="icon-camp" viewBox="0 0 24 24">
+      <path d="M3 19h18M12 5l9 14M12 5L3 19M12 9v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>

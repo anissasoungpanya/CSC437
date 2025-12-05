@@ -4,14 +4,14 @@ import Parks from "../services/park-svc";
 
 const router = express.Router();
 
-// GET /api/parks - get all parks 
+// GET /api/parks - get all parks
 router.get("/", (_, res: Response) => {
   Parks.index()
     .then((list) => res.json(list))
     .catch((err) => res.status(500).send(err));
 });
 
-// GET /api/parks/:parkId - get specfic park 
+// GET /api/parks/:parkId - get specfic park
 router.get("/:parkId", (req: Request, res: Response) => {
   const { parkId } = req.params;
 

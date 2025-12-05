@@ -11,9 +11,17 @@
       <circle cx="12" cy="12" r="3" fill="currentColor"/>
     </symbol>
 
-    <!-- Campsite: a tent -->
-    <symbol id="icon-camp" viewBox="0 0 24 24">
-      <path d="M3 19h18M12 5l9 14M12 5L3 19M12 9v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </symbol>
+     <!-- Lodging: a bed -->
+    <symbol id="icon-bed" viewBox="0 0 24 24">
+  <path d="M3 18V8h18v10M3 14h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</symbol>
+
+
+    <!-- Activties: star -->
+    <symbol id="icon-activity" viewBox="0 0 24 24">
+  <path d="M12 3l2.5 6h6l-4.5 3.5L17 21l-5-3-5 3 1-8.5L3.5 9h6L12 3Z"
+    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
   </defs>
 </svg>

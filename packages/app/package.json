@@ -1,0 +1,18 @@
+{
+  "name": "app",
+  "private": true,
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx vite",
+    "build": "npx tsc && npx vite build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21"
+  },
+  "dependencies": {
+    "@calpoly/mustang": "^1.0.15",
+    "lit": "^3.3.1",
+    "server": "file:../server"
+  }
+}

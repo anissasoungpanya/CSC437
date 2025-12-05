@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign Up - National Parks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/styles/tokens.css" />
+    <link rel="stylesheet" href="/styles/page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Baloo+2:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module">
+      import { define, Auth } from "@calpoly/mustang";
+      import { RegisterFormElement } from "/src/auth/register-form.ts";
+
+      define({
+        "mu-auth": Auth.Provider,
+        "register-form": RegisterFormElement,
+      });
+    </script>
+  </head>
+  <body class="page">
+    <mu-auth provides="parks:auth">
+      <header>
+        <h1>National Parks</h1>
+      </header>
+      <main>
+        <h2>Create New Account</h2>
+        <div class="card">
+          <register-form api="/auth/register" redirect="/app">
+            <label>
+              <span>Username:</span>
+              <input name="username" autocomplete="username" />
+            </label>
+            <label>
+              <span>Password:</span>
+              <input
+                type="password"
+                name="password"
+                autocomplete="new-password"
+              />
+            </label>
+            <label>
+              <span>Confirm Password:</span>
+              <input
+                type="password"
+                name="confirmPassword"
+                autocomplete="new-password"
+              />
+            </label>
+          </register-form>
+        </div>
+        <p>Already have an account? <a href="/login.html">Log in here</a>.</p>
+      </main>
+    </mu-auth>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+[dotenv@17.2.3] injecting env (4) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+Serving static files from: /Users/anissasoungpanya/CSC437/packages/app/dist
+Connecting to MongoDB at mongodb+srv://anissamsoungpanya_db_user:<password>@cluster0.ojo234c.mongodb.net/webDB
+MongoDB connected successfully
+Server running at http://0.0.0.0:3000
+[0;36mMongoose:[0m parks.createIndex({ parkId: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })

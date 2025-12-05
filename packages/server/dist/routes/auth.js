@@ -85,7 +85,7 @@ function authenticateUser(req, res, next) {
   }
 }
 var auth_default = router;
-// Annotate the CommonJS export names for ESM import in node:
+
 0 && (module.exports = {
   authenticateUser
 });
