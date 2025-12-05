@@ -41,7 +41,8 @@ export class ParkGridElement extends LitElement {
     title: string,
     iconId: string,
     items: CardItem[],
-    linkLabel?: string
+    linkLabel?: string,
+    disableLinks = false
   ) {
     if (!items?.length) return null;
     return html`
@@ -56,7 +57,7 @@ export class ParkGridElement extends LitElement {
           ${items.map(
             (it) => html`
               <park-card
-                href=${it.href}
+                href=${disableLinks ? "" : it.href}
                 subtitle=${it.subtitle ?? ""}
                 img-src=${it.imgSrc ?? ""}
                 link-label=${linkLabel ?? ""}
@@ -80,7 +81,7 @@ export class ParkGridElement extends LitElement {
     const activities = park.activities ?? [];
 
     return html`
-      ${this.renderSection("Top Hikes", "icon-hike", hikes)}
+      ${this.renderSection("Top Hikes", "icon-hike", hikes, undefined, true)}
       ${this.renderSection("Top Viewpoints", "icon-view", viewpoints)}
       ${this.renderSection("Top Lodging", "icon-bed", lodging, "Book here")}
       ${this.renderSection("Top Activities", "icon-activity", activities)}
